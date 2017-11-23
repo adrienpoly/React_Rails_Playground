@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <%= image_tag 'React.png' %>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse navbar-right" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li className="nav-item"><%= link_to "Video Player", video_player_path, html_options = {class: "nav-link active"} %></li>
+        <li className="nav-item"><%= link_to "Book List", book_list_path, html_options = {class: "nav-link"} %></li>
+        <li className="nav-item"><%= link_to "Weather", weather_path, html_options = {class: "nav-link"} %></li>
+        <!-- <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li> -->
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a class="navbar-brand" href="https://www.github.com">
+          <button class="btn btn-success" type="button"><i class="fa fa-github"></i> Github</button>
+        </a>
+      </form>
+    </div>
+  </div>
+</nav>
