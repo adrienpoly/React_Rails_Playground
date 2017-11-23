@@ -7,7 +7,8 @@ gem 'pg'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'erubis'
-gem 'redis'
+# gem 'redis'
+gem 'mini_racer'
 
 gem 'sass-rails'
 # gem 'jquery-rails'
@@ -34,3 +35,5 @@ group :development do
   gem 'web-console'
   gem 'annotate'
 end
+
+gem 'mini_racer', platforms: :ruby

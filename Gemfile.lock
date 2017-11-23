@@ -82,6 +82,7 @@ GEM
     jbuilder (2.7.0)
       activesupport (>= 4.2.0)
       multi_json (>= 1.2)
+    libv8 (5.9.211.38.1)
     listen (3.0.8)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -93,6 +94,8 @@ GEM
     method_source (0.9.0)
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
+    mini_racer (0.1.14)
+      libv8 (~> 5.9)
     minitest (5.10.3)
     multi_json (1.12.2)
     nio4r (2.1.0)
@@ -149,7 +152,6 @@ GEM
       execjs (~> 2.5)
       rails (>= 3.2)
       rainbow (~> 2.2)
-    redis (4.0.1)
     sass (3.5.3)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -204,13 +206,13 @@ DEPENDENCIES
   font-awesome-sass
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
+  mini_racer
   pg
   pry-byebug
   pry-rails
   puma
   rails (= 5.1.4)
   react_on_rails
-  redis
   sass-rails
   simple_form!
   spring
