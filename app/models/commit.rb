@@ -11,4 +11,7 @@
 #
 
 class Commit < ApplicationRecord
+  validates :slug,                uniqueness: true
+  validates :slug,                presence: true
+  validates :release_created_at,  presence: true
 end
