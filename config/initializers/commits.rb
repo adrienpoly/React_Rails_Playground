@@ -7,7 +7,7 @@ ROOT_URL = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed'
 def new_commit?
   return true if Commit.all.blank?
   if Rails.env.production?
-    Commit.last.release_version != ENV["HEROKU_RELEASE_VERSION"]
+    Commit.last.slug != ENV["HEROKU_SLUG_COMMIT"]
   else
     Commit.last.release_created_at != `git log -1 --format=%cd`
   end
