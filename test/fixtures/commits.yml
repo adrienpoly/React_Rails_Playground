@@ -1,0 +1,25 @@
+# == Schema Information
+#
+# Table name: commits
+#
+#  id                 :integer          not null, primary key
+#  release_created_at :datetime         not null
+#  slug               :string           not null
+#  page_speed         :jsonb            not null
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  release_version: MyString
+  release_created_at: 2017-11-25 19:09:56
+  slug: MyString
+  page_speed: 
+
+two:
+  release_version: MyString
+  release_created_at: 2017-11-25 19:09:56
+  slug: MyString
+  page_speed: 
