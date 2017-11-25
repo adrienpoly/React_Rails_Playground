@@ -14,9 +14,9 @@ def new_commit?
 end
 
 def add_commit
-  page_speed = RestClient
-                .get(ROOT_URL, params: { url: TEST_URL, key: ENV["google_api_key"] })
-
+  # page_speed = RestClient
+                # .get(ROOT_URL, params: { url: TEST_URL, key: ENV["google_api_key"] })
+  page_speed = RestClient.get("#{ROOT_URL}?url=#{TEST_URL}&key=#{ENV["google_api_key"]}", headers = {})
   release_created_at = ENV["HEROKU_RELEASE_CREATED_AT"] || `git log -1 --format=%cd`.strip
   slug = ENV["HEROKU_SLUG_COMMIT"] || `git rev-parse HEAD`.strip
   commit = Commit.create(
