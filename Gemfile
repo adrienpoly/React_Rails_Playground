@@ -10,6 +10,7 @@ gem 'mini_racer'
 gem 'high_voltage', '~> 3.0.0'
 
 gem 'sass-rails'
+gem 'uglifier'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'

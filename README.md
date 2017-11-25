@@ -8,7 +8,9 @@ The second step was to use the same components with the `gem React on Rails` to 
 
 In further experiments, I am testing various approches to persist data in a Rails back end and in general interface backends with React components (coming....).
 
-Live demo can be see at: (coming....)
+# Demo
+Live demo can be see at:
+https://react-rails-playground.herokuapp.com/
 
 ## Video Player
 
