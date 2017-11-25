@@ -1,22 +1,18 @@
 source 'https://rubygems.org'
-ruby '2.3.3'
+ruby '2.4.2'
 
 gem 'rails', '5.1.4'
 gem 'puma'
 gem 'pg'
 gem 'figaro'
 gem 'jbuilder', '~> 2.0'
-gem 'erubis'
-# gem 'redis'
 gem 'mini_racer'
+gem 'high_voltage', '~> 3.0.0'
 
 gem 'sass-rails'
-# gem 'jquery-rails'
-# gem 'uglifier'
-# gem 'bootstrap-sass'
-gem 'font-awesome-sass'
-gem 'simple_form', github: 'elsurudo/simple_form', branch: 'rails-5.1.0'
 gem 'autoprefixer-rails'
+gem 'font-awesome-sass'
+gem 'simple_form'
 gem 'webpacker'
 gem 'react_on_rails'
 
@@ -28,12 +24,9 @@ group :development, :test do
   gem 'spring'
   gem 'listen', '~> 3.0.5'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'faker'
 end
 
 group :development do
   gem 'web-console'
   gem 'annotate'
 end
-
-gem 'mini_racer', platforms: :ruby

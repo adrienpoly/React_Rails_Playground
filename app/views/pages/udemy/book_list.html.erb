@@ -1,0 +1,10 @@
+<div class="padded-3">
+  <div class="container">
+    <h1 class="text-center">Book List</h1>
+    <div id="book-list"></div>
+  </div>
+</div>
+
+<% content_for :after_js do %>
+  <%= javascript_pack_tag "book_list" %>
+<% end %>

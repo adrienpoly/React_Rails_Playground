@@ -9,7 +9,7 @@ import _ from 'lodash'
 const API_KEY = 'AIzaSyCSlhxkHsiCF1ncWeGPyP30tP-DYjBP9e8'
 
 
-class App extends Component {
+export default class VideoPlayerApp extends Component {
   constructor(props){
   	super(props);
   	this.state = {
@@ -35,13 +35,14 @@ class App extends Component {
       <div>
         <SearchBar
         onSearch = {videoSearch}/>
-        <VideoDetails video={this.state.selectedVideo}/>
-        <VideoList
-          onVideoSelect={ selectedVideo => this.setState({selectedVideo}) }
-          videos={this.state.videos} />
+
+        <div className="row">
+          <VideoDetails video={this.state.selectedVideo}/>
+          <VideoList
+            onVideoSelect={ selectedVideo => this.setState({selectedVideo}) }
+            videos={this.state.videos} />
+        </div>
       </div>
     )
   }
 }
-
-ReactDOM.render(<App />, document.querySelector('#video-player'))

@@ -6,7 +6,7 @@ import { FetchWeather } from '../actions/index';
 class SearchBar extends Component {
   constructor(props) {
     super(props);
-    this.state = { term: 'Paris' };
+    this.state = { term: '' };
 
     this.onInputChange = this.onInputChange.bind(this);
     this.onFormSubmit = this.onFormSubmit.bind(this);
@@ -27,7 +27,7 @@ class SearchBar extends Component {
       <div className="search-bar">
         <form className="input-group" onSubmit={this.onFormSubmit}>
             <input
-            placeholder="Get a 5 day forcast in your favorite cities"
+            placeholder="Get a 5 day forecast in your favorite cities"
             className = "form-control input-lg"
             value     = {this.state.term}
             onChange  = {this.onInputChange}/>
@@ -44,6 +44,5 @@ class SearchBar extends Component {
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({FetchWeather}, dispatch)
 }
-
 
 export default connect (null, mapDispatchToProps)(SearchBar);

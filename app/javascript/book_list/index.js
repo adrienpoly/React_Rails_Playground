@@ -1,5 +1,4 @@
 import React,{Component} from 'react';
-import ReactDOM from 'react-dom';
 import BookList from './containers/book_list'
 import BookDetails from './containers/book_details'
 import { Provider } from 'react-redux';
@@ -12,7 +11,7 @@ class App extends Component {
 
     render() {
         return (
-          <div>
+          <div className="row">
             <BookList />
             <BookDetails />
           </div>
@@ -23,8 +22,10 @@ class App extends Component {
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-ReactDOM.render(
+const BookListApp = (_props, _railsContext) => (
   <Provider store={createStoreWithMiddleware(reducers)}>
     <App />
   </Provider>
-  , document.querySelector('#book-list'));
+);
+
+export default BookListApp;

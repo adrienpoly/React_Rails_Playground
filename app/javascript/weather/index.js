@@ -19,11 +19,12 @@ class App extends Component {
     }
 }
 
-
 const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
 
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('#weather'));
+const WeatherApp = (_props, _railsContext) => (
+    <Provider store={createStoreWithMiddleware(reducers)}>
+      <App />
+    </Provider>
+)
+
+export default WeatherApp;

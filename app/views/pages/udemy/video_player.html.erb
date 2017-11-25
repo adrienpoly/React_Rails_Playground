@@ -1,0 +1,10 @@
+<div class="padded-3">
+  <div class="container">
+    <h1 class="text-center">Video Player with React on Rails</h1>
+    <div id="video-player"></div>
+  </div>
+</div>
+
+<% content_for :after_js do %>
+  <%= javascript_pack_tag "video_player" %>
+<% end %>
