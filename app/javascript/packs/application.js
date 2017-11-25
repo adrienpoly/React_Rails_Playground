@@ -3,7 +3,6 @@ import Turbolinks from 'turbolinks'
 Turbolinks.start()
 
 import ReactOnRails from 'react-on-rails';
-import HelloWorld from '../bundles/HelloWorld/components/HelloWorld';
 import VideoPlayer from '../video_player';
 import BookList from '../book_list';
 import Weather from '../weather';
