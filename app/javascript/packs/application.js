@@ -1,5 +1,6 @@
 import 'bootstrap.native/dist/bootstrap-native-v4'
 import Turbolinks from 'turbolinks'
+Turbolinks.start()
 
 import ReactOnRails from 'react-on-rails';
 import HelloWorld from '../bundles/HelloWorld/components/HelloWorld';
@@ -12,5 +13,3 @@ ReactOnRails.register({
   BookList,
   Weather
 });
-
-// Turbolinks.start()
