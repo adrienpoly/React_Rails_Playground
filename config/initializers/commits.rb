@@ -23,4 +23,4 @@ def add_commit
   )
 end
 
-add_commit if new_commit?
+# add_commit if new_commit?
