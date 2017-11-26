@@ -1,1 +1,1 @@
-GetPageSpeedJob.set(wait: 30.second).perform_later()
+GetPageSpeedJob.set(wait: 3.minute).perform_later()
