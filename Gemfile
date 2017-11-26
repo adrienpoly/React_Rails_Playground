@@ -9,7 +9,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'mini_racer'
 gem 'high_voltage', '~> 3.0.0'
 gem 'heroku-deflater'
-gem 'rest-client'
+# gem 'rest-client'
+gem "http"
 
 gem 'sass-rails'
 gem 'uglifier'
