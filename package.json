@@ -9,6 +9,7 @@
     "bootstrap.native": "^2.0.19",
     "coffeescript": "1.12.7",
     "font-awesome": "^4.7.0",
+    "glob-all": "^3.1.0",
     "google-map-react": "^0.25.0",
     "jquery": "^3.2.1",
     "jquery-ujs": "^1.2.2",
