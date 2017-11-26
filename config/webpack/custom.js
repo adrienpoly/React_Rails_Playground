@@ -39,10 +39,9 @@ module.exports = {
       // paths: glob.sync(path.join(__dirname, '../../app/**/*.html.*')),
       paths: glob.sync([
         path.join(__dirname, '../../app/**/*.html*'),
-        path.join(__dirname, '../../app/**/*.js*'),
-        path.join(__dirname, '../../app/**/*.js'),
-        path.join(__dirname, '../../app/**/*.jsx'),
-        path.join(__dirname, '../../app/**/*.json')
+        path.join(__dirname, '../../app/**/*.j*'),
+        path.join(__dirname, '../../public/**/*.j*'),
+        path.join(__dirname, '../../public/**/*.html*')
       ]),
       purifyOptions: {
         minify: true,
