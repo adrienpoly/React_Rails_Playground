@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class CommitsController < ApplicationController
   # respond_to :json
 
