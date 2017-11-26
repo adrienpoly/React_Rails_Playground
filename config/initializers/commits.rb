@@ -19,6 +19,7 @@ def add_commit
   release_created_at = ENV["HEROKU_RELEASE_CREATED_AT"] || `git log -1 --format=%cd`.strip
   slug = ENV["HEROKU_SLUG_COMMIT"] || `git rev-parse HEAD`.strip
 
+  return if page_speed.code != 200
   commit = Commit.create(
     release_created_at: release_created_at,
     slug: slug,
