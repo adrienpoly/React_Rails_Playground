@@ -7,7 +7,7 @@ import VideoList from './components/video_list';
 import VideoDetails from './components/video_details';
 import _ from 'lodash'
 const API_KEY = 'AIzaSyCSlhxkHsiCF1ncWeGPyP30tP-DYjBP9e8'
-
+import "./assets/stylesheets/style.scss"
 
 export default class VideoPlayerApp extends Component {
   constructor(props){

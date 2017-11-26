@@ -14,12 +14,12 @@ gem 'rails', '5.1.4'
 # gem 'rest-client'
 gem 'http'
 
-gem 'autoprefixer-rails'
-gem 'font-awesome-sass'
+# gem 'autoprefixer-rails'
+# gem 'font-awesome-sass'
 gem 'react_on_rails'
-gem 'sass-rails'
+# gem 'sass-rails'
 gem 'simple_form'
-gem 'uglifier'
+# gem 'uglifier'
 gem 'webpacker'
 
 group :development, :test do

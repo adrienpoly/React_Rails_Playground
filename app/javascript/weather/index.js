@@ -6,6 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import SearchBar from './containers/search_bar'
 import WeatherList from './containers/weather_list'
 import ReduxPromise from 'redux-promise'
+import "./assets/stylesheets/style.scss"
 
 class App extends Component {
 
