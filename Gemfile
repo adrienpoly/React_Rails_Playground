@@ -19,7 +19,7 @@ gem 'http'
 gem 'react_on_rails'
 # gem 'sass-rails'
 gem 'simple_form'
-# gem 'uglifier'
+gem 'uglifier'
 gem 'webpacker'
 
 group :development, :test do

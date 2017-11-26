@@ -169,6 +169,8 @@ GEM
     thread_safe (0.3.6)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
+    uglifier (3.2.0)
+      execjs (>= 0.3.0, < 3)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.4)
@@ -207,6 +209,7 @@ DEPENDENCIES
   simple_form
   spring
   spring-watcher-listen (~> 2.0.0)
+  uglifier
   web-console
   webpacker
 
