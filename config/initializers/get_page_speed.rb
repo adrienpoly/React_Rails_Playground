@@ -1,3 +1,3 @@
 # frozen_string_literal: true
 
-GetPageSpeedJob.set(wait: 3.minutes).perform_later
+GetPageSpeedJob.set(wait: 3.minute).perform_later
