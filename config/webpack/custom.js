@@ -38,8 +38,10 @@ module.exports = {
       // Give paths to parse for rules. These should be absolute!
       // paths: glob.sync(path.join(__dirname, '../../app/**/*.html.*')),
       paths: glob.sync([
-        path.join(__dirname, '../../app/**/*.html.*'),
+        path.join(__dirname, '../../app/**/*.html*'),
         path.join(__dirname, '../../app/**/*.js*'),
+        path.join(__dirname, '../../app/**/*.js'),
+        path.join(__dirname, '../../app/**/*.jsx'),
         path.join(__dirname, '../../app/**/*.json')
       ]),
       purifyOptions: {
