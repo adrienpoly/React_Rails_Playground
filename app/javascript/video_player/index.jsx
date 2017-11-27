@@ -21,6 +21,7 @@ export default class VideoPlayerApp extends Component {
 
   videoSearch(term){
     YTsearch({key: API_KEY, term: term}, videos => {
+      console.log(videos);
       this.setState({
         selectedVideo: videos[0],
         videos
