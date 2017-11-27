@@ -14,11 +14,16 @@ module.exports = {
     new PurifyCSSPlugin({
       // Give paths to parse for rules. These should be absolute!
       // paths: glob.sync(path.join(__dirname, '../../app/**/*.html.*')),
-      paths: glob.sync([
+      paths: isProduction ? glob.sync([
         // path.join(__dirname, '../../**/*.html*')
         path.join(__dirname, '../../app/**/*.j*'),
         // path.join(__dirname, '../../public/**/*.j*'),
-        path.join(__dirname, '../../app/**/*.html*')
+        path.join(__dirname, '../../app/**/*.html*') :
+        glob.sync([
+          // path.join(__dirname, '../../**/*.html*')
+          path.join(__dirname, '../../app/**/*.j*'),
+          // path.join(__dirname, '../../public/**/*.j*'),
+          path.join(__dirname, '../../app/**/*.html*')
       ]),
       purifyOptions: {
         minify: true,
