@@ -1,17 +1,5 @@
-// Graphical variables
-@import "config/fonts";
-@import "config/colors";
+
+@import "config/custom_bootstrap";
+
 @import "config/utilities";
-@import "config/bootstrap_variables";
-
-// External libraries
-// @import "bootstrap-sprockets";
-// @import "bootstrap";
-// @import "bootstrap/dist/css/bootstrap";
-@import "bootstrap/dist/css/bootstrap.css";
-
-// @import "font-awesome-sprockets";
-// @import "font-awesome/css/font-awesome.css";
-
-// Your CSS partials
 @import "components/index";

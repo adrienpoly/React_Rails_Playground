@@ -2,7 +2,7 @@ import 'bootstrap.native/dist/bootstrap-native-v4'
 import '../stylesheets/application.scss'
 
 import Turbolinks from 'turbolinks'
-Turbolinks.start()
+// Turbolinks.start()
 
 import ReactOnRails from 'react-on-rails';
 import VideoPlayer from '../video_player';
