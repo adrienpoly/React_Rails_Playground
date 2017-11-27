@@ -17,7 +17,6 @@ export default class VideoPlayerApp extends Component {
       selectedVideo: null,
       term: ''
     };
-    // this.videoSearch("surf")
   }
 
   videoSearch(term){
@@ -27,6 +26,10 @@ export default class VideoPlayerApp extends Component {
         videos
       });
     });
+  }
+
+  componentDidMount() {
+    this.videoSearch(this.props.term)
   }
 
   render() {
