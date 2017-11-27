@@ -16,4 +16,7 @@ class Commit < ApplicationRecord
   validates :slug,                uniqueness: true
   validates :slug,                presence: true
   validates :release_created_at,  presence: true
+
+  scope     :scores, -> { pluck("page_speed -> 'ruleGroups' -> 'SPEED' -> 'score'") }
+
 end
