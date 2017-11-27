@@ -9,9 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= render 'layouts/favicon' %>
 
-    <%#= stylesheet_link_tag 'application', media: 'all' %>
-    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet"> -->
-    <link href="https://fonts.googleapis.com/css?family=Pacifico|Roboto:400,700" rel="stylesheet">
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
@@ -21,4 +18,7 @@
       <%= javascript_pack_tag 'application' %>
     <%= yield :after_js %>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script> WebFont.load({ google: { families: ['Roboto:400,700'] }});</script>
+
 </html>
