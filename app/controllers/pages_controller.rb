@@ -3,6 +3,7 @@
 class PagesController < ApplicationController
   def home
     @scores = Commit.scores
-    @score = @scores.last
+    @latest = @scores.last.value
+    @best   = Commit.best
   end
 end
