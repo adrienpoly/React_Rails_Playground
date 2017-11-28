@@ -9,10 +9,9 @@
             </div>
             <div class="card-block" style="min-height: 250px;">
               <%= react_component 'PageSpeedChart', props: {data: @scores} %>
-              <p class="text-muted text-center">Latest = <%= @latest %>, Best = <%= @best %></p>
             </div>
             <div class="card-footer align-middle">
-              <p>At every new commit Page Speed test is launch as a background job. Results are persisted in the database. This react component displays the results for each past commits.</p>
+              <p>At every new commit, a Page Speed test is launch as a background job. Results are then persisted in the database. This react component displays the results for each past commits.</p>
               <p>This component is generated with <strong>Gem React on Rails</strong> passing rails data to the props of the component with the rails helper.</p>
             </div>
           </div>
@@ -24,10 +23,9 @@
             </div>
             <div class="card-block" style="min-height: 250px;">
               <div id="page_speed_chart" style="min-height: 250px;"></div>
-              <p class="text-muted text-center">Latest = <%= @latest %>, Best = <%= @best %></p>
             </div>
             <div class="card-footer align-middle">
-              <p>At every new commit Page Speed test is launch as a background job. Results are persisted in the database. This react component displays the results for each past commits.</p>
+              <p>At every new commit, a Page Speed test is launch as a background job. Results are then persisted in the database. This react component displays the results for each past commits.</p>
               <p>This component is generated in pure React. Data are fecth from the backend using an ajax call (Axios) to /commits.</p>
             </div>
           </div>
