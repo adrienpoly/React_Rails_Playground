@@ -6,8 +6,8 @@
           <div class="card-header text-center">
             <h3>React on Rails Gem rendering</h3>
           </div>
-          <div class="card-block" style="min-height: 250px; width: 100%;">
-            <%= react_component 'PageSpeedChart', props: {data: @scores, remote: false} %>
+          <div class="card-block" style="min-height: 320px; width: 100%;">
+            <%= react_component 'PageSpeedChart', props: {data: @scores} %>
           </div>
           <div class="card-footer align-middle">
             <p>At every new commit, a Page Speed test is launch as a background job. Results are then persisted in the database. This react component displays the results for each past commits.</p>
@@ -20,8 +20,8 @@
           <div class="card-header text-center">
             <h3>Pure React rendering</h3>
           </div>
-          <div class="card-block" style="min-height: 250px;">
-            <div id="page_speed_chart" style="min-height: 250px;"></div>
+          <div class="card-block" style="min-height: 320px;">
+            <div id="page_speed_chart"></div>
           </div>
           <div class="card-footer align-middle">
             <p>At every new commit, a Page Speed test is launch as a background job. Results are then persisted in the database. This react component displays the results for each past commits.</p>

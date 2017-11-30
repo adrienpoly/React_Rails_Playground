@@ -36,6 +36,6 @@
     "youtube-api-search": "^0.0.5"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.9.4"
+    "webpack-dev-server": "^2.9.5"
   }
 }
