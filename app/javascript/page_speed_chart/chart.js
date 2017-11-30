@@ -35,7 +35,7 @@ export default class PageSpeedChart extends Component {
 
     componentWillMount() {
       if (!this.state.remote) return
-      axios.get('/commits')
+      axios.get('/commits?order=asc')
       .then( response => response.data )
       .then( data => {
         return data.map((commit) => {
