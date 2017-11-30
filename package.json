@@ -4,6 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "^3.0.2",
     "axios": "^0.17.1",
+    "babel-plugin-recharts": "^1.1.0",
     "babel-preset-react": "^6.24.1",
     "bootstrap": "4.0.0-beta.2",
     "bootstrap.native": "^2.0.19",
@@ -26,7 +27,7 @@
     "react-on-rails": "^10.0.2",
     "react-redux": "^5.0.6",
     "react-sparklines": "^1.7.0",
-    "recharts": "^1.0.0-beta.2",
+    "recharts": "^1.0.0-beta.5",
     "redux": "^3.7.2",
     "redux-promise": "^0.5.3",
     "sass-loader": "^6.0.6",

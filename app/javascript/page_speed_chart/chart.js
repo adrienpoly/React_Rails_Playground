@@ -1,5 +1,5 @@
 import React,{Component} from 'react';
-import { LineChart, Line, Tooltip, YAxis, XAxis, Legend } from 'recharts';
+import { BarChart, Bar, Cell, LineChart, Line, Tooltip, YAxis, XAxis, ResponsiveContainer } from 'recharts';
 import _ from 'lodash'
 import axios from 'axios'
 
@@ -19,7 +19,6 @@ function last(commits) {
   if (!commits) return 0
   return commits.pop().value
 }
-
 
 export default class PageSpeedChart extends Component {
 
@@ -43,26 +42,23 @@ export default class PageSpeedChart extends Component {
       const data   = mapData(this.state.data)
       const latest = last(this.state.data)
       const best   = max(this.state.data)
+      if (!data) return <div></div>;
         return (
           <div>
-            <LineChart data={data} width={530} height={250}
-              margin={{top: 30, right: 20, bottom: 20, left: 0}}>
-              <defs>
-                 <linearGradient id="colorValue" x1="0" y1="0" x2="0" y2="1">
-                   <stop offset="0%" stopColor="#009688" stopOpacity={1}/>
-                   <stop offset="30%" stopColor="#009688" stopOpacity={1}/>
-                   <stop offset="30%" stopColor="#fd7e14" stopOpacity={1}/>
-                   <stop offset="50%" stopColor="#fd7e14" stopOpacity={1}/>
-                   <stop offset="50%" stopColor="#f0384a" stopOpacity={1}/>
-                   <stop offset="100%" stopColor="#f0384a" stopOpacity={1}/>
-                 </linearGradient>
-               </defs>
-              <YAxis type="number" domain={[0, 100]} label={{ value: 'Score', angle: -90, position: 'insideLeft', offset: 15 }} />
-              <XAxis dataKey="name" label={{ value: 'Commit', position: 'insideBottom', offset: -10 }}  />
-              <Line type="monotone" dataKey="value" dot={false} isAnimationActive={false} stroke="url(#colorValue)" strokeWidth={3} />
-              <Tooltip/>
-            </LineChart>
-            <p className="text-muted text-center">Latest = {latest}, Best = {best} </p>
+              <BarChart data={data} margin={{top: 30, right: 20, bottom: 20, left: 0}} width={540} height={250}>
+                <YAxis type="number" domain={[0, 100]} label={{ value: 'Score', angle: -90, position: 'insideLeft', offset: 15 }} />
+                <XAxis dataKey="name" label={{ value: 'Commit', position: 'insideBottom', offset: -10 }}  />
+                <Bar dataKey="value" fill="#8884d8" >
+                  {
+                    data.map((entry, index) => {
+                      const color = entry.value > 90 ? "#009688" : entry.value > 70 ? "#fd7e14" : '#f0384a';
+                      return <Cell fill={color} key={index} />;
+                    })
+                  }
+                </Bar>
+                <Tooltip/>
+              </BarChart>
+              <p className="text-muted text-center">Latest = {latest}, Best = {best} </p>
           </div>
         );
     }
