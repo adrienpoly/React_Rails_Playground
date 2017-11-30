@@ -4,7 +4,6 @@ import _ from 'lodash'
 import axios from 'axios'
 
 
-
 function mapData(data){
   if (!data) return
   return data.map((e) => { return {value: e.value, name: e.commit_id.substring(0,7)}})
@@ -22,12 +21,20 @@ function last(commits) {
 
 export default class PageSpeedChart extends Component {
 
+    static defaultProps = {
+      remote: true, // by default fetching the data by Ajax call
+    };
+
     constructor(props){
     	super(props);
-    	this.state = {data: ''};
+    	this.state = {
+        data: props.data,
+        remote: props.remote
+      };
     }
 
     componentWillMount() {
+      if (!this.state.remote) return
       axios.get('/commits')
       .then( response => response.data )
       .then( data => {
