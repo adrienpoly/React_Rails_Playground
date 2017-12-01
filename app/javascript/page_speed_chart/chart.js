@@ -1,11 +1,9 @@
-import React,{Component} from 'react';
-import {
-  BarChart, Bar, Cell,
-  Tooltip, YAxis, XAxis, ResponsiveContainer } from 'recharts';
+import React, { Component } from 'react';
+import { BarChart, Bar, Cell,
+         Tooltip, YAxis, XAxis, ResponsiveContainer } from 'recharts';
 import ChartStats from './chart_stats'
 import axios from 'axios'
 import './chart.scss'
-
 
 function mapData(data){
   if (!data) return
@@ -13,9 +11,6 @@ function mapData(data){
 }
 
 export default class PageSpeedChart extends Component {
-    static defaultProps = {
-      remote: true, // by default fetching the data by Ajax call
-    };
 
     constructor(props){
     	super(props);
