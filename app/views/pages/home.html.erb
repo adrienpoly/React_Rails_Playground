@@ -7,7 +7,7 @@
             <h3>React on Rails Gem rendering</h3>
           </div>
           <div class="card-block" style="min-height: 320px; width: 100%;">
-            <%= react_component 'PageSpeedChart', props: {data: @scores} %>
+            <%= react_component 'PageSpeedChart', props: {data: @scores}, prerender: false %>
           </div>
           <div class="card-footer align-middle">
             <p>At every new commit, a Page Speed test is launch as a background job. Results are then persisted in the database. This react component displays the results for each past commits.</p>
