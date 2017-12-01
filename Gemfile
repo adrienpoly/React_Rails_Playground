@@ -34,5 +34,7 @@ end
 
 group :development do
   gem 'annotate'
+  gem 'guard'
+  gem 'guard-rubocop'
   gem 'web-console'
 end
