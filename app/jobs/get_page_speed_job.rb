@@ -30,7 +30,7 @@ class GetPageSpeedJob < ApplicationJob
     release_created_at = ENV['HEROKU_RELEASE_CREATED_AT'] || `git log -1 --format=%cd`.strip
     slug = ENV['HEROKU_SLUG_COMMIT'] || `git rev-parse HEAD`.strip
 
-    commit = Commit.create(
+    Commit.create(
       release_created_at: release_created_at,
       slug: slug,
       page_speed: JSON.parse(page_speed.body.to_s) || {}

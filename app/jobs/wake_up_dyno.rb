@@ -9,6 +9,6 @@ class WakeUpDyno < ApplicationJob
   ROOT_URL = 'https://www.googleapis.com/pagespeedonline/v2/runPagespeed'
 
   def perform
-    page_speed = HTTP.get(ROOT_URL, params: { url: TEST_URL, key: ENV['google_api_key'] })
+    HTTP.get(ROOT_URL, params: { url: TEST_URL, key: ENV['google_api_key'] })
   end
 end
