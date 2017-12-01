@@ -7,15 +7,12 @@ function max(commits) {
 
 function last(commits) {
   if (!commits) return 0
-
-  console.log('last', commits[-1]);
   return commits[commits.length - 1].value
 }
 
 export default class ChartStats extends Component {
 
     render() {
-      console.log(this.props.data);
       const latest = last(this.props.data)
       const best   = max(this.props.data)
         return (

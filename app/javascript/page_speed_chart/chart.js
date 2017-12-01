@@ -36,7 +36,7 @@ export default class PageSpeedChart extends Component {
       const data   = mapData(this.state.data)
       if (!data) return <div></div>;
         return (
-          <div className="page-speed-app">
+          <div className="mt-2 mb-3">
             <div className="page-speed-chart">
               <ResponsiveContainer height={320}>
                 <BarChart data={data} margin={{top: 30, right: 30, bottom: 20, left: 0}} width={520} height={250}>

@@ -738,10 +738,9 @@ $navbar-dark-hover-color:           rgba($white,.5);
 // $popover-body-padding-y:            $popover-header-padding-y !default;
 // $popover-body-padding-x:            $popover-header-padding-x !default;
 //
-// $popover-arrow-width:               .8rem !default;
-// $popover-arrow-height:              .4rem !default;
-// $popover-arrow-color:               $popover-bg !default;
-//
+$popover-arrow-width:                 10px;
+$popover-arrow-height:                5px;
+$popover-arrow-color:                 $popover-bg;
 // $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
 //
 //

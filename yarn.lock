@@ -1037,6 +1037,12 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
+bootstrap-datepicker@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/bootstrap-datepicker/-/bootstrap-datepicker-1.7.1.tgz#4ee7faf34888dbec7834fbf9dbe7c4277e01ddaf"
+  dependencies:
+    jquery ">=1.7.1 <4.0.0"
+
 bootstrap.native@^2.0.19:
   version "2.0.19"
   resolved "https://registry.yarnpkg.com/bootstrap.native/-/bootstrap.native-2.0.19.tgz#9c08fb628fef40c0bfc97ac04df57d1d05b6c4de"
@@ -3252,7 +3258,7 @@ jquery-ujs@^1.2.2:
   dependencies:
     jquery ">=1.8.0"
 
-jquery@>=1.8.0, jquery@^3.2.1:
+"jquery@>=1.7.1 <4.0.0", jquery@>=1.8.0, jquery@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.2.1.tgz#5c4d9de652af6cd0a770154a631bba12b015c787"
 
@@ -4033,6 +4039,10 @@ normalize-url@^1.4.0:
     prepend-http "^1.0.0"
     query-string "^4.1.0"
     sort-keys "^1.0.0"
+
+nouislider@^10.1.0:
+  version "10.1.0"
+  resolved "https://registry.yarnpkg.com/nouislider/-/nouislider-10.1.0.tgz#7bdd0411fd62d4584bfe88cb92bb8d06e64c6b47"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
@@ -5723,6 +5733,13 @@ shallow-clone@^0.1.2:
 shallow-copy@~0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/shallow-copy/-/shallow-copy-0.0.1.tgz#415f42702d73d810330292cc5ee86eae1a11a170"
+
+shards-ui@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/shards-ui/-/shards-ui-1.1.1.tgz#3bfbdad958d0c019e9ba04d860d1725bb1cfb6dd"
+  dependencies:
+    bootstrap-datepicker "^1.7.1"
+    nouislider "^10.1.0"
 
 shebang-command@^1.2.0:
   version "1.2.0"
