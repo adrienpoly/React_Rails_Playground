@@ -2,14 +2,21 @@
 
 This project was initiated while I was following the Udemy course "Modern React with Redux". It is now a Playground app for testing various technologies between React and Rails.
 
-While the courses on Udemy focus mostly on stand alone application, the first steps was to bundle those components into a basic rails app using `rails 5.1.4` and `Webpacker 3.0`.
+While the courses on Udemy focus mostly on stand alone application, the first step was to bundle those components into a basic rails app using `rails 5.1.4` and `Webpacker 3.0`.
 
 The second step was to use the same components with the `gem React on Rails` to benchmark the pros & cons of the native integration vs React on Rails.
 
-In further experiments, I am testing various approches to persist data in a Rails back end and in general interface backends with React components (coming....).
+In further experiments, I am testing various approaches to persist data in a Rails back end and in general interface backends with React components (coming....).
+
+This app is built with the following key points:
+- jQuery is completely removed
+- the Rails asset pipeline is only used for images
+- all css, scss and js are processed with Webpacker
+- optimization to get google page speed as close as possible to 100
+- Bootstrap 4
 
 # Demo
-Live demo can be see at:
+Live demo can be seen at:
 https://react-rails-playground.herokuapp.com/
 
 ## Video Player
@@ -20,7 +27,7 @@ Search a term and display videos from a Youtube query
 **Key points:**
 - Youtube api
 - Simple components without Redux
-- No link to any backends, all datas are coming from Youtube and none are persitted
+- No link to any backends, all data are coming from Youtube and none are persisted
 
 ## Book list
 
