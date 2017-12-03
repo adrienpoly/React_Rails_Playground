@@ -60,11 +60,7 @@ class Commit < ApplicationRecord
     def charts
       charts = []
       attributes.each do |attribute|
-<<<<<<< HEAD
         chart = chart_to_hash(attribute)
-=======
-        chart = COMMIT_ATTRIBUTES[attribute].except(:path).merge(values: get_values(attribute))
->>>>>>> ba92aaf313dad45e10fa68ad00209f2088744a70
         charts << Chart.new(*chart.values_at(*Chart.members))
       end
       charts
@@ -72,13 +68,10 @@ class Commit < ApplicationRecord
 
     private
 
-<<<<<<< HEAD
     def chart_to_hash(attribute)
       COMMIT_ATTRIBUTES[attribute].except(:path).merge(values: get_values(attribute))
     end
 
-=======
->>>>>>> ba92aaf313dad45e10fa68ad00209f2088744a70
     def get_values(attr)
       order(created_at: :asc).pluck('slug', COMMIT_ATTRIBUTES[attr][:path])
                              .map { |data| Score.new(*data) }
