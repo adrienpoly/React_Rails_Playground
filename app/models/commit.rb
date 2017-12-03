@@ -17,8 +17,8 @@ class Commit < ApplicationRecord
   validates :slug,                presence: true
   validates :release_created_at,  presence: true
 
-  Score = Struct.new(:commit_id, :value)
-  Chart = Struct.new(:name, :divider, :unit, :chart_type, :values)
+  Data = Struct.new(:commit_id, :value)
+  Chart = Struct.new(:name, :divider, :unit, :chartType, :data)
 
   scope :best, -> { pluck("page_speed -> 'ruleGroups' -> 'SPEED' -> 'score'").max }
 
@@ -29,21 +29,35 @@ class Commit < ApplicationRecord
         name: 'Page Speed Score',
         divider: 1,
         unit: '',
-        chart_type: 'Bar'
+        chartType: 'bar_chart'
       },
       js_weights: {
         path: "page_speed -> 'pageStats' -> 'javascriptResponseBytes'",
-        name: 'Javascript total weight',
+        name: 'Javascript Total Weight',
         divider: 1024,
         unit: 'kb',
-        chart_type: 'LineChart'
+        chartType: 'line_chart'
       },
       css_weights: {
         path: "page_speed -> 'pageStats' -> 'cssResponseBytes'",
-        name: 'CSS total weight',
+        name: 'CSS Total Weight',
         divider: 1024,
         unit: 'kb',
-        chart_type: 'LineChart'
+        chartType: 'line_chart'
+      },
+      html_weights: {
+        path: "page_speed -> 'pageStats' -> 'htmlResponseBytes'",
+        name: 'HTML Total Weight',
+        divider: 1024,
+        unit: 'kb',
+        chartType: 'line_chart'
+      },
+      image_weights: {
+        path: "page_speed -> 'pageStats' -> 'imageResponseBytes'",
+        name: 'Image Total Weight',
+        divider: 1024,
+        unit: 'kb',
+        chartType: 'line_chart'
       }
     }.freeze
 
@@ -69,12 +83,12 @@ class Commit < ApplicationRecord
     private
 
     def chart_to_hash(attribute)
-      COMMIT_ATTRIBUTES[attribute].except(:path).merge(values: get_values(attribute))
+      COMMIT_ATTRIBUTES[attribute].except(:path).merge(data: get_values(attribute))
     end
 
     def get_values(attr)
       order(created_at: :asc).pluck('slug', COMMIT_ATTRIBUTES[attr][:path])
-                             .map { |data| Score.new(*data) }
+                             .map { |data| Data.new(*data) }
     end
   end
 end

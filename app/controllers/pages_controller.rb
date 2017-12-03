@@ -11,8 +11,5 @@ class PagesController < ApplicationController
 
   def page_speed
     @charts = Commit.charts
-    # Commit.attributes.each do |attribute|
-    #   @values[attribute] = { values: Commit.send(attribute) }
-    # end
   end
 end

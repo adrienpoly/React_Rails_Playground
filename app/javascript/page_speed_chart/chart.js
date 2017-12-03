@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import { BarChart, Bar, Cell,
-         Tooltip, YAxis, XAxis, ResponsiveContainer } from 'recharts';
+import { ResponsiveContainer } from 'recharts';
+import BarChart from './bar_chart'
+import LineChart from './line_chart'
 import ChartStats from './chart_stats'
 import axios from 'axios'
-import './chart.scss'
 
-function mapData(data){
-  if (!data) return
-  return data.map((e) => { return {value: e.value, name: e.commit_id.substring(0,7)}})
+const components = {
+  bar_chart: BarChart,
+  line_chart: LineChart,
 }
 
 export default class PageSpeedChart extends Component {
@@ -15,13 +15,14 @@ export default class PageSpeedChart extends Component {
     constructor(props){
     	super(props);
     	this.state = {
-        data: props.data,
+        ...props,
         remote: props.data ? false : true
       }
     }
 
     componentWillMount() {
       if (!this.state.remote) return
+      this.setState({ chartType: 'bar_chart' })  // temporary fix
       axios.get('/commits?order=asc')
       .then( response => response.data )
       .then( data => {
@@ -33,28 +34,16 @@ export default class PageSpeedChart extends Component {
     }
 
     render() {
-      const data   = mapData(this.state.data)
-      if (!data) return <div></div>;
+      const state = this.state
+      const data   = state.data
+      const Chart  = components[state.chartType]
+      if (!data || !Chart) return <div></div>;
         return (
           <div className="mt-2 mb-3">
-            <div className="page-speed-chart">
-              <ResponsiveContainer height={320}>
-                <BarChart data={data} margin={{top: 30, right: 30, bottom: 20, left: 0}} width={520} height={250}>
-                  <YAxis type="number" domain={[0, 100]} label={{ value: 'Score', angle: -90, position: 'insideLeft', offset: 15 }} />
-                  <XAxis dataKey="name" label={{ value: 'Commit', position: 'insideBottom', offset: -10 }}  />
-                  <Bar dataKey="value" fill="#8884d8" isAnimationActive={false}>
-                    {
-                      data.map((entry, index) => {
-                        const color = entry.value > 90 ? "#009688" : entry.value > 70 ? "#fd7e14" : '#f0384a';
-                        return <Cell fill={color} key={index} />;
-                      })
-                    }
-                  </Bar>
-                  <Tooltip/>
-                </BarChart>
-              </ResponsiveContainer>
-            </div>
-            <ChartStats data={data} />
+            <ResponsiveContainer height={320}>
+              <Chart data={data} unit={state.unit} divider={state.divider}/>
+            </ResponsiveContainer>
+            <ChartStats data={data} unit={state.unit} divider={state.divider}/>
           </div>
         );
     }
