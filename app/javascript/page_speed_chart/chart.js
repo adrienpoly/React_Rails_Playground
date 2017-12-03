@@ -42,7 +42,7 @@ export default class PageSpeedChart extends Component {
                 <BarChart data={data} margin={{top: 30, right: 30, bottom: 20, left: 0}} width={520} height={250}>
                   <YAxis type="number" domain={[0, 100]} label={{ value: 'Score', angle: -90, position: 'insideLeft', offset: 15 }} />
                   <XAxis dataKey="name" label={{ value: 'Commit', position: 'insideBottom', offset: -10 }}  />
-                  <Bar dataKey="value" fill="#8884d8">
+                  <Bar dataKey="value" fill="#8884d8" isAnimationActive={false}>
                     {
                       data.map((entry, index) => {
                         const color = entry.value > 90 ? "#009688" : entry.value > 70 ? "#fd7e14" : '#f0384a';
