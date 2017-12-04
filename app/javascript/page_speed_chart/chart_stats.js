@@ -1,4 +1,5 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
+import _ from 'lodash'
 
 function max(commits, divider) {
   if (!commits) return 0

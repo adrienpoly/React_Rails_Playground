@@ -40,7 +40,7 @@ export default class PageSpeedChart extends Component {
       if (!data || !Chart) return <div></div>;
         return (
           <div className="mt-2 mb-3">
-            <Chart data={data} unit={state.unit} divider={state.divider}/>
+            <Chart data={data} unit={state.unit} divider={state.divider} limit={state.limit}/>
             <ChartStats data={data} unit={state.unit} divider={state.divider}/>
           </div>
         );

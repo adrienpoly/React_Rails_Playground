@@ -18,7 +18,7 @@ class Commit < ApplicationRecord
   validates :release_created_at,  presence: true
 
   Data = Struct.new(:commit_id, :value)
-  Chart = Struct.new(:name, :divider, :unit, :chartType, :data)
+  Chart = Struct.new(:name, :divider, :unit, :chartType, :limit, :data)
 
   scope :best, -> { pluck("page_speed -> 'ruleGroups' -> 'SPEED' -> 'score'").max }
 
@@ -36,28 +36,32 @@ class Commit < ApplicationRecord
         name: 'Javascript Total Weight',
         divider: 1024,
         unit: 'kb',
-        chartType: 'area_chart'
+        chartType: 'area_chart',
+        limit: 500
       },
       css_weights: {
         path: "page_speed -> 'pageStats' -> 'cssResponseBytes'",
         name: 'CSS Total Weight',
         divider: 1024,
         unit: 'kb',
-        chartType: 'area_chart'
+        chartType: 'area_chart',
+        limit: 150
       },
       html_weights: {
         path: "page_speed -> 'pageStats' -> 'htmlResponseBytes'",
         name: 'HTML Total Weight',
         divider: 1024,
         unit: 'kb',
-        chartType: 'area_chart'
+        chartType: 'area_chart',
+        limit: 10
       },
       image_weights: {
         path: "page_speed -> 'pageStats' -> 'imageResponseBytes'",
         name: 'Image Total Weight',
         divider: 1024,
         unit: 'kb',
-        chartType: 'area_chart'
+        chartType: 'area_chart',
+        limit: 20
       }
     }.freeze
 
