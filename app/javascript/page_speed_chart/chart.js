@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { ResponsiveContainer } from 'recharts';
 import BarChart from './bar_chart'
-import LineChart from './line_chart'
+import AreaChart from './area_chart'
 import ChartStats from './chart_stats'
 import axios from 'axios'
 
 const components = {
   bar_chart: BarChart,
-  line_chart: LineChart,
+  area_chart: AreaChart,
 }
 
 export default class PageSpeedChart extends Component {
@@ -40,9 +40,7 @@ export default class PageSpeedChart extends Component {
       if (!data || !Chart) return <div></div>;
         return (
           <div className="mt-2 mb-3">
-            <ResponsiveContainer height={320}>
-              <Chart data={data} unit={state.unit} divider={state.divider}/>
-            </ResponsiveContainer>
+            <Chart data={data} unit={state.unit} divider={state.divider}/>
             <ChartStats data={data} unit={state.unit} divider={state.divider}/>
           </div>
         );

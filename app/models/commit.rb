@@ -36,28 +36,28 @@ class Commit < ApplicationRecord
         name: 'Javascript Total Weight',
         divider: 1024,
         unit: 'kb',
-        chartType: 'line_chart'
+        chartType: 'area_chart'
       },
       css_weights: {
         path: "page_speed -> 'pageStats' -> 'cssResponseBytes'",
         name: 'CSS Total Weight',
         divider: 1024,
         unit: 'kb',
-        chartType: 'line_chart'
+        chartType: 'area_chart'
       },
       html_weights: {
         path: "page_speed -> 'pageStats' -> 'htmlResponseBytes'",
         name: 'HTML Total Weight',
         divider: 1024,
         unit: 'kb',
-        chartType: 'line_chart'
+        chartType: 'area_chart'
       },
       image_weights: {
         path: "page_speed -> 'pageStats' -> 'imageResponseBytes'",
         name: 'Image Total Weight',
         divider: 1024,
         unit: 'kb',
-        chartType: 'line_chart'
+        chartType: 'area_chart'
       }
     }.freeze
 
