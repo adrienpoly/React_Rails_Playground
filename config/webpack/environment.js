@@ -1,23 +1,23 @@
-const { environment } = require('@rails/webpacker')
-const webpack = require('webpack')
-const merge = require('webpack-merge')
+const { environment } = require("@rails/webpacker");
+const webpack = require("webpack");
+const merge = require("webpack-merge");
 // Get a pre-configured plugin
-environment.plugins.get('ExtractText') // Is an ExtractTextPlugin instance
+environment.plugins.get("ExtractText"); // Is an ExtractTextPlugin instance
 
 // Add an additional plugin of your choosing : ProvidePlugin
 environment.plugins.set(
-  'Provide',
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery',
-      jquery: 'jquery',
-      'window.Tether': 'tether',
-      Popper: ['popper.js', 'default'],
-      ActionCable: 'actioncable',
-      // Vue: 'vue',
-      // VueResource: 'vue-resource',
-    })
-)
+  "Provide",
+  new webpack.ProvidePlugin({
+    $: "jquery",
+    jQuery: "jquery",
+    jquery: "jquery",
+    "window.Tether": "tether",
+    Popper: ["popper.js", "default"],
+    ActionCable: "actioncable"
+    // Vue: 'vue',
+    // VueResource: 'vue-resource',
+  })
+);
 
 // const myCssLoaderOptions = {
 //   modules: true,
@@ -29,4 +29,4 @@ environment.plugins.set(
 //
 // CSSLoader.options = merge(CSSLoader.options, myCssLoaderOptions)
 
-module.exports = environment
+module.exports = environment;

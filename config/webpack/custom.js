@@ -1,11 +1,11 @@
-const { env } = require('process')
-const isProduction = env.NODE_ENV === 'production'
+const { env } = require("process");
+const isProduction = env.NODE_ENV === "production";
 
-const path = require('path');
+const path = require("path");
 // const glob = require('glob');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const PurifyCSSPlugin = require('purifycss-webpack');
-const glob = require('glob-all');
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const PurifyCSSPlugin = require("purifycss-webpack");
+const glob = require("glob-all");
 //
 module.exports = {
   // module:{
