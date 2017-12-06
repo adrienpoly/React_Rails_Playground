@@ -1,5 +1,7 @@
 # **React and Rails Playground App**
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/14c0c089767146219949c03bc11b0dbf)](https://www.codacy.com/app/adrienpoly/React_Rails_Playground?utm_source=github.com&utm_medium=referral&utm_content=adrienpoly/React_Rails_Playground&utm_campaign=badger)
+
 This project was initiated while I was following the Udemy course "Modern React with Redux". It is now a Playground app for testing various technologies between React and Rails.
 
 While the courses on Udemy focus mostly on stand alone application, the first step was to bundle those components into a basic rails app using `rails 5.1.4` and `Webpacker 3.0`.
