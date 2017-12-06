@@ -1,4 +1,4 @@
-$white:    #fff;
+$white: #fff;
 // $gray-100: #f8f9fa;
 // $gray-200: #e9ecef;
 // $gray-300: #dee2e6;
@@ -479,8 +479,8 @@ $white:    #fff;
 // $navbar-toggler-font-size:          $font-size-lg !default;
 // $navbar-toggler-border-radius:      $btn-border-radius !default;
 //
-$navbar-dark-color:                 rgba($white,.8);
-$navbar-dark-hover-color:           rgba($white,.5);
+$navbar-dark-color: rgba($white, 0.8);
+$navbar-dark-hover-color: rgba($white, 0.5);
 // $navbar-dark-active-color:          $white !default;
 // $navbar-dark-disabled-color:        rgba($white,.25) !default;
 // $navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
@@ -581,6 +581,6 @@ $navbar-dark-hover-color:           rgba($white,.5);
 // $popover-body-padding-y:            $popover-header-padding-y !default;
 // $popover-body-padding-x:            $popover-header-padding-x !default;
 //
-$popover-arrow-width:                 10px;
-$popover-arrow-height:                5px;
+$popover-arrow-width: 10px;
+$popover-arrow-height: 5px;
 // $popover-arrow-color:                 $popover-bg;

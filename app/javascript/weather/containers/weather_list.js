@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import Chart from '../components/chart';
-import ReChart from '../components/rechart';
-import Map from '../components/map';
-import _ from 'lodash';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { bindActionCreators } from "redux";
+import Chart from "../components/chart";
+import ReChart from "../components/rechart";
+import Map from "../components/map";
+import _ from "lodash";
 
 class WeatherList extends Component {
   constructor(props) {
@@ -26,7 +26,7 @@ class WeatherList extends Component {
 
     return (
       <tr key={name}>
-        <td style={{ width: '200px', height: '200px' }}>
+        <td style={{ width: "200px", height: "200px" }}>
           <Map center={{ lat: lat, lng: lon }} zoom={10} />
         </td>
         <td>

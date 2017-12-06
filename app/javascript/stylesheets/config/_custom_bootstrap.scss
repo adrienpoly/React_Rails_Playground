@@ -3,11 +3,10 @@
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 
-
 //
 // Color system
 //
-$white:    #fff;
+$white: #fff;
 $gray-100: #f8f9fa;
 $gray-200: #e9ecef;
 $gray-300: #dee2e6;
@@ -17,21 +16,21 @@ $gray-600: #868e96;
 $gray-700: #495057;
 $gray-800: #343a40;
 $gray-900: #212529;
-$black:    #000;
+$black: #000;
 
-$body-bg:                   $white;
-$body-color:                $gray-900;
+$body-bg: $white;
+$body-color: $gray-900;
 
-$blue:    #39699d;
-$indigo:  #6610f2;
-$purple:  #6f42c1;
-$pink:    #e83e8c;
-$red:     #f0384a;
-$orange:  #fd7e14;
-$yellow:  #FFC107;
-$green:   #009688;
-$teal:    #009688;
-$cyan:    #17a2b8;
+$blue: #39699d;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #f0384a;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #009688;
+$teal: #009688;
+$cyan: #17a2b8;
 // Links
 //
 // Style anchor elements.
@@ -40,10 +39,10 @@ $cyan:    #17a2b8;
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-$link-color:                theme-color("primary");
-$link-decoration:           none;
-$link-hover-color:          darken($link-color, 15%);
-$link-hover-decoration:     underline;
+$link-color: theme-color("primary");
+$link-decoration: none;
+$link-hover-color: darken($link-color, 15%);
+$link-hover-decoration: underline;
 
 $body-font: "Roboto", "Helvetica", "sans-serif";
 $headers-font: "Roboto", "Helvetica", "sans-serif";
@@ -181,7 +180,7 @@ $headers-font: "Roboto", "Helvetica", "sans-serif";
 // $enable-caret:              true !default;
 // $enable-rounded:            true !default;
 // $enable-shadows:            false !default;
-$enable-gradients:          true;
+$enable-gradients: true;
 // $enable-transitions:        true !default;
 // $enable-hover-media-query:  false !default;
 // $enable-grid-classes:       true !default;
@@ -636,8 +635,8 @@ $enable-gradients:          true;
 // $navbar-toggler-font-size:          $font-size-lg !default;
 // $navbar-toggler-border-radius:      $btn-border-radius !default;
 //
-$navbar-dark-color:                 rgba($white,.8);
-$navbar-dark-hover-color:           rgba($white,.5);
+$navbar-dark-color: rgba($white, 0.8);
+$navbar-dark-hover-color: rgba($white, 0.5);
 // $navbar-dark-active-color:          $white !default;
 // $navbar-dark-disabled-color:        rgba($white,.25) !default;
 // $navbar-dark-toggler-icon-bg:       str-replace(url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='#{$navbar-dark-color}' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"), "#", "%23") !default;
@@ -738,9 +737,9 @@ $navbar-dark-hover-color:           rgba($white,.5);
 // $popover-body-padding-y:            $popover-header-padding-y !default;
 // $popover-body-padding-x:            $popover-header-padding-x !default;
 //
-$popover-arrow-width:                 10px;
-$popover-arrow-height:                5px;
-$popover-arrow-color:                 $popover-bg;
+$popover-arrow-width: 10px;
+$popover-arrow-height: 5px;
+$popover-arrow-color: $popover-bg;
 // $popover-arrow-outer-color:         fade-in($popover-border-color, .05) !default;
 //
 //
