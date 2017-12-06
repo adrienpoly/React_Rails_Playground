@@ -26,7 +26,7 @@ class WeatherList extends Component {
     return (
       <tr key={name}>
         <td style={{ width: "200px", height: "200px" }}>
-          <Map center={{ lat: lat, lng: lon }} zoom={10} />
+          <Map center={{ lat, lng: lon }} zoom={10} />
         </td>
         <td>
           <ReChart data={temperatures} color="orange" units="c°" />
