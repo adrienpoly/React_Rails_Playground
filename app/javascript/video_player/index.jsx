@@ -1,7 +1,7 @@
 // import React from 'react';
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
-import YTsearch from "youtube-api-search";
+import youtubeSearch from "youtube-api-search";
 import SearchBar from "./components/search_bar";
 import VideoList from "./components/video_list";
 import VideoDetails from "./components/video_details";
@@ -20,8 +20,8 @@ export default class VideoPlayerApp extends Component {
   }
 
   videoSearch(term) {
-    const youtubeSearch = YTsearch.new;
-    YTsearch({ key: API_KEY, term }, videos => {
+    // const youtubeSearch = YTsearch.new;
+    youtubeSearch({ key: API_KEY, term }, videos => {
       this.setState({
         selectedVideo: videos[0],
         videos
